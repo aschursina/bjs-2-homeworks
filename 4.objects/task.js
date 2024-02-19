@@ -21,7 +21,7 @@ Student.prototype.addMarks = function (...addMark) {
   if (this.hasOwnProperty('marks') === false || this.marks.length < 1) {
     return 0;
   } 
-  return result = this.marks.reduce((acc, item, index, arr) => {
+  return this.marks.reduce((acc, item, index, arr) => {
     acc+=item;
     if (index === arr.length - 1) {
         return acc / arr.length;
