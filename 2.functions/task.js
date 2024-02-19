@@ -26,26 +26,17 @@ function getArrayParams(...arr) {
 
 
 function summElementsWorker(...arr) {
-  let sum = arr.reduce((sumArr, a) => sumArr + a, 0);
- /*arr = reduce(sumArr, 0); // 
-   function sumArr(accumulator, a) {
-   return accumulator + a;
-  }
-  console.log(arr);*/
-
-  return sum;
+  return arr.reduce((sumArr, a) => sumArr + a, 0);
 }
 
 
 function differenceMaxMinWorker(...arr) {
-  let min = 0;
-  let max = 0;
   if (arr.length < 1) {
     return 0;
   } 
 
-  min = Math.min(...arr);
-  max = Math.max(...arr);
+  let min = Math.min(...arr);
+  let max = Math.max(...arr);
   
   return max - min;
 }
