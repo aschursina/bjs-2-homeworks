@@ -1,11 +1,19 @@
 ﻿//task 1
-/*function parseCount (value) {
-   function Number.parseFloat() {
+function parseCount (value) {
+  let result = Number.parseFloat(value);
+  if (Number.isNaN(result)) {
+    throw Error('Невалидное значение');
+  } 
+  return result;
+} 
 
-   }
-  Number.parseFloat()
-    
-} */
+function validateCount (value) {
+  try {
+    return parseCount(value);
+  } catch (error) {
+    return error;
+  }
+}
 
 //task 2
 class Triangle  {
